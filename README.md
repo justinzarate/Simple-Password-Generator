@@ -13,3 +13,23 @@
 > Allows users to specify password length.
 > Allows users to specify the number of passwords to generate.
 > Uses a combination of uppercase letters, lowercase letters, numbers, and special characters for password generation.
+
+**Code**
+```python
+import random
+
+chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@#$%^&*"
+
+while 1:
+    password_len = int(input("How long would you like your password to be? "))
+    password_count = int(input("How many passwords would you like to generate? "))
+    for x in range(0, password_count):
+        password = ""
+        for y in range(0, password_len):
+            password_char = random.choice(chars)
+            password = password + password_char
+        print("Here is your password : ", password)
+```
+**Notes**
+> Ensure you have Python installed on your machine to run the script.
+> It's always recommended to use a combination of generated passwords and personal modifications to enhance security.
